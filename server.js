@@ -3,7 +3,7 @@ const express = require('express')
 const http = require('http')
 const moment = require('moment');
 const socketio = require('socket.io');
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 
 const app = express();
 const server = http.createServer(app);
@@ -109,6 +109,7 @@ io.on('connect', socket => {
         //toDo: push socket.id out of rooms
     });
 })
+
 
 
 server.listen(PORT, () => console.log(`Server is up and running on port ${PORT}`));
